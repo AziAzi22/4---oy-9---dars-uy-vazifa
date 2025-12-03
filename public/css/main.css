@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.carousel-item img {
+  height: 40vh;
+  object-fit: cover;
+}
+.ggtort:hover {
+background-color: chartreuse !important;
+border: none !important;
+}
+.RED{
+  background-color: rgb(226, 43, 43) !important;
+  text-align: center !important;
+}
+.cardss{
+  background-color: cadetblue !important;
+}

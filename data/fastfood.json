@@ -1,0 +1,34 @@
+[
+    {
+        "id": "c19bc6f6-725e-414b-ab07-e9ee1f30ef13",
+        "title": "",
+        "price": "",
+        "discription": "",
+        "calories": "",
+        "tiem": "2:14"
+    },
+    {
+        "id": "3ea840b4-870c-4df1-a3a4-f8ee85f3320d",
+        "title": "HOT - DOG",
+        "price": "23000",
+        "discription": "ikkita sosika va sirli mayonez va chili ketchub",
+        "calories": "210",
+        "tiem": "2:51"
+    },
+    {
+        "id": "db49f171-87b9-453f-a68e-b5dc7a484233",
+        "title": "Big Pizza Chease&Ananas",
+        "price": "83000",
+        "discription": "ham mazali ham foydali ",
+        "calories": "610",
+        "tiem": "2:53"
+    },
+    {
+        "id": "574bd897-f543-466d-b9ac-e753bc5b693f",
+        "title": "Pepperoni PIzza",
+        "price": "69000",
+        "discription": "halol qolbasa",
+        "calories": "530",
+        "tiem": "2:56"
+    }
+]
