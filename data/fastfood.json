@@ -1,10 +1,10 @@
 [
     {
         "id": "c19bc6f6-725e-414b-ab07-e9ee1f30ef13",
-        "title": "",
-        "price": "",
-        "discription": "",
-        "calories": "",
+        "title": "KFC",
+        "price": "75000",
+        "discription": "uy tovug'i qo'shtidan halol so'yilgan",
+        "calories": "520",
         "tiem": "2:14"
     },
     {
@@ -17,7 +17,7 @@
     },
     {
         "id": "db49f171-87b9-453f-a68e-b5dc7a484233",
-        "title": "Big Pizza Chease&Ananas",
+        "title": "Pizza Chease&Ananas",
         "price": "83000",
         "discription": "ham mazali ham foydali ",
         "calories": "610",

@@ -19,13 +19,13 @@ a {
   object-fit: cover;
 }
 .ggtort:hover {
-background-color: chartreuse !important;
-border: none !important;
+  background-color: chartreuse !important;
+  border: none !important;
 }
-.RED{
+.RED {
   background-color: rgb(226, 43, 43) !important;
   text-align: center !important;
 }
-.cardss{
+.cardss {
   background-color: cadetblue !important;
 }

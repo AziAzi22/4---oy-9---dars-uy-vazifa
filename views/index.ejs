@@ -235,10 +235,10 @@
       <div
         class="card-box pb-5 mb-5 mt-5 d-flex justify-content-evenly gap-5 flex-wrap"
       >
-        <% menu.forEach(food => { %>
+        <% menu.forEach((food, index) => { %>
         <div class="card" style="width: 18rem">
           <img
-            src="https://picsum.photos/200/200"
+            src="https://picsum.photos/200/200?random=<%= index %>"
             class="card-img-top"
             alt="..."
           />
