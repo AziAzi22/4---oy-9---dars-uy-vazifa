@@ -5,7 +5,7 @@ const myFind = (arr, id) => arr.find((food) => food.id === id);
 
 /// get menu
 
-const getMenu = (req, res) => {
+const getMenu = async (req, res) => {
   try {
     res.status(200).render("index", { menu });
   } catch (error) {
@@ -17,13 +17,13 @@ const getMenu = (req, res) => {
 
 /// get one food
 
-const getOneFood = (req, res) => {
+const getOneFood = async (req, res) => {
   try {
     const { id } = req.params;
     const foundedFood = myFind(menu, id);
 
     if (!foundedFood) {
-      return res.status(302).redirect("http://localhost:4004/get_menu");
+      return res.status(302).redirect("http://four-oy-9-dars-uy-vazifa-1.onrender.com/get_menu");
     }
 
     res.status(200).render("details", { foundedFood });
@@ -36,7 +36,7 @@ const getOneFood = (req, res) => {
 
 /// add new food
 
-const addNewFood = (req, res) => {
+const addNewFood = async (req, res) => {
   try {
     const { title, price, discription, calories } = req.body;
     menu.push({
@@ -49,7 +49,7 @@ const addNewFood = (req, res) => {
     });
 
     write_file("fastfood.json", menu);
-    res.status(312).redirect("http://localhost:4004/get_menu");
+    res.status(312).redirect("http://four-oy-9-dars-uy-vazifa-1.onrender.com/get_menu");
   } catch (error) {
     res.status(500).json({
       message: error.message,
@@ -59,14 +59,14 @@ const addNewFood = (req, res) => {
 
 /// update food
 
-const updateFood = (req, res) => {
+const updateFood = async (req, res) => {
   try {
     const { id } = req.params;
     const foundedFood = myFind(menu, id);
     const { title, price, discription, calories } = req.body;
 
     if (!foundedFood) {
-      return res.status(302).redirect("http://localhost:4004/get_menu");
+      return res.status(302).redirect("http://four-oy-9-dars-uy-vazifa-1.onrender.com/get_menu");
     }
 
     menu.forEach((food) => {
@@ -78,8 +78,8 @@ const updateFood = (req, res) => {
       }
     });
 
-    write_file("fastfood.json", menu)
-    res.status(302).redirect("http://localhost:4004/get_menu")
+    write_file("fastfood.json", menu);
+    res.status(302).redirect("http://four-oy-9-dars-uy-vazifa-1.onrender.com/get_menu");
   } catch (error) {
     res.status(500).json({
       message: error.message,
@@ -89,23 +89,23 @@ const updateFood = (req, res) => {
 
 /// delete food
 
-const deleteFood = (req, res) => {
+const deleteFood = async (req, res) => {
   try {
-    const {id} = req.params
-    const foundedFood = myFind(menu, id)
+    const { id } = req.params;
+    const foundedFood = myFind(menu, id);
 
     if (!foundedFood) {
-        res.status(302).redirect("http://localhost:4004/get_menu")
+      res.status(302).redirect("http://four-oy-9-dars-uy-vazifa-1.onrender.com/get_menu");
     }
 
     menu.forEach((food, i) => {
-        if (food.id === id) {
-            menu.splice(i, 1)
-        }
+      if (food.id === id) {
+        menu.splice(i, 1);
+      }
     });
 
-    write_file("fastfood.json", menu)
-    res.status(302).redirect("http://localhost:4004/get_menu")
+    write_file("fastfood.json", menu);
+    res.status(302).redirect("http://four-oy-9-dars-uy-vazifa-1.onrender.com/get_menu");
   } catch (error) {
     res.status(500).json({
       message: error.message,
