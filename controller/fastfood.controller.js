@@ -23,7 +23,7 @@ const getOneFood = async (req, res) => {
     const foundedFood = myFind(menu, id);
 
     if (!foundedFood) {
-      return res.status(302).redirect("https://four-oy-9-dars-uy-vazifa-1.onrender.com/get_menu");
+      return res.status(302).redirect("/get_menu");
     }
 
     res.status(200).render("details", { foundedFood });
@@ -49,7 +49,7 @@ const addNewFood = async (req, res) => {
     });
 
     write_file("fastfood.json", menu);
-    res.status(312).redirect("https://four-oy-9-dars-uy-vazifa-1.onrender.com/get_menu");
+    res.status(312).redirect("/get_menu");
   } catch (error) {
     res.status(500).json({
       message: error.message,
@@ -66,7 +66,7 @@ const updateFood = async (req, res) => {
     const { title, price, discription, calories } = req.body;
 
     if (!foundedFood) {
-      return res.status(302).redirect("https://four-oy-9-dars-uy-vazifa-1.onrender.com/get_menu");
+      return res.status(302).redirect("/get_menu");
     }
 
     menu.forEach((food) => {
@@ -79,7 +79,7 @@ const updateFood = async (req, res) => {
     });
 
     write_file("fastfood.json", menu);
-    res.status(302).redirect("https://four-oy-9-dars-uy-vazifa-1.onrender.com/get_menu");
+    res.status(302).redirect("/get_menu");
   } catch (error) {
     res.status(500).json({
       message: error.message,
@@ -87,7 +87,7 @@ const updateFood = async (req, res) => {
   }
 };
 
-/// delete food
+/// delete food redirect
 
 const deleteFood = async (req, res) => {
   try {
@@ -95,7 +95,7 @@ const deleteFood = async (req, res) => {
     const foundedFood = myFind(menu, id);
 
     if (!foundedFood) {
-      res.status(302).redirect("https://four-oy-9-dars-uy-vazifa-1.onrender.com/get_menu");
+      res.status(302).redirect("/get_menu");
     }
 
     menu.forEach((food, i) => {
@@ -105,7 +105,7 @@ const deleteFood = async (req, res) => {
     });
 
     write_file("fastfood.json", menu);
-    res.status(302).redirect("https://four-oy-9-dars-uy-vazifa-1.onrender.com/get_menu");
+    res.status(302).redirect("/get_menu");
   } catch (error) {
     res.status(500).json({
       message: error.message,

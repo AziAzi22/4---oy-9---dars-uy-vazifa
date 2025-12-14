@@ -12,7 +12,7 @@ app.use(express.static("public"));
 
 /// router
 
-app.use(fastfoodRouter);
+app.use(fastfoodRouter);  
 
 app.listen(PORT, () => {
   console.log("Server is runnig at: http://localhost:" + PORT + "/get_menu");
