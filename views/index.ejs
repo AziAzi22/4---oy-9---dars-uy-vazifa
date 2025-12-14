@@ -164,7 +164,10 @@
             <div class="modal-body">
               <!-- form  -->
 
-              <form action="http://four-oy-9-dars-uy-vazifa-1.onrender.com/add_new_food" method="post">
+              <form
+                action="https://four-oy-9-dars-uy-vazifa-1.onrender.com/add_new_food"
+                method="post"
+              >
                 <div class="mb-3">
                   <label for="title-input" class="form-label">Title</label>
                   <input
@@ -245,7 +248,18 @@
           <div class="card-body">
             <h4 class="card-title"><%= food.title %></h4>
             <p class="card-text"><%= food.price %></p>
-            <a href="#" class="btn btn-primary">see more for food</a>
+            <a href="/get_one_food/<%= food.id %>" class="btn btn-primary"
+              >See more</a
+            >
+
+            <!-- DELETE button -->
+            <form
+              action="/delete_food/<%= food.id %>"
+              method="post"
+              style="display: inline"
+            >
+              <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
           </div>
         </div>
         <% }) %>
